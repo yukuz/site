@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"> -->
+
+
+  <title>Юра Кузнецов</title>
+  <style>
+    /* body, h1, h2, h3, h4, h5, h6  {
+      font-family: Roboto, sans-serif;
+    } */
+    
+    #desktop  .active{
+      color: white!important;                /* Цвет букв выбранного пункта меню (вторая строка) */
+      border-bottom: white solid 1px;        /* Цвет, сплошная линия, толщина нижней рамки выбранного пункта меню (вторая строка) */
+    }
+
+    #main {
+      border-style: none !important;           /* Отключено нижнее подчеркивание */
+      color: rgb(100, 100, 100) !important;     /* Цвет букв верхнего пункта меню, где картинка   */
+      background: rgb(15, 15, 15) !important;  /* Цвет фона верхнего пункта меню, где картинка*/
+    }
+s
+    #main:hover{
+      color:white!important;    /* Цвет букв верхней строки при наведении на нее */
+      background: black!important;  /* Цвет фона верхней строки при наведении на нее */
+    }
+
+    button.w3-bar-item.w3-hide-small:hover {
+      color: rgb(254, 254, 254) !important;       /* Цвет букв пунктов меню при наведении (вторая строка)*/
+      background: rgb(20, 20, 20)!important;      /* Цвет фона пунктов меню при наведении (вторая строка)*/
+      border-bottom: white solid 1px !important;  /* Цвет, сплошная линия, толщина нижней рамки пунктов меню при наведении (вторая строка) */
+    }   
+
+    .menu {
+      margin-top: 10vh;
+    }
+
+    iframe {
+      margin-top: 4vh;
+      margin-bottom: -1.5vh;
+      margin-left: 0.5vw;
+      margin-right: 0.5vw;
+    }
+
+    .w3-round:hover {
+      color: white !important;                  /* Цвет букв кнопок */
+      background:rgb(15, 15, 15)  !important;   /* Цвет фона кнопок */
+      border-bottom: white solid 1px;           /* Цвет, сплошная линия, толщина нижней рамки пкнопок при наведении */
+    }
+
+    /* .w3-black {
+      background: rgb(15, 15, 15) !important;
+    } */
+
+    .top {
+      padding-top: 5px;
+      padding-bottom: 5px ;
+    }
+
+    /* .yura:hover {
+      background: rgb(15, 15, 15) !important;
+      border-bottom: white solid 1px !important;
+    } */
+
+    p {
+      color: white !important;
+    }
+
+    .mob {
+      font-size:30px;
+      color: rgb(20, 20, 20) !important;  /* Цвет бургер-меню на мобильном */
+      background: white !important;       /* Цвет фона ургер-меню на мобильном */
+    }
+
+    frame {
+      display:block;
+    }
+
+    a[href^="javascript:"] {
+      color: white; /* Цвет текста кнопок перехода к видео и музыке*/
+    }
+
+    a[href^="mailto:"] {
+      color: white; /* Цвет текста кнопок mailto*/
+    }
+
+    #desktop {
+      background: rgb(50,50,50);  /*  Цвет фона второй строки где нет текста  */
+    }
+
+    #desktop >  .w3-mobile {
+    color:white !important; /* Цвет букв меню (2 строчка) на компьютера где есть текст */
+      background: rgb(50,50,50) !important; /* Цвет фона меню (2 строчка) на компьютерагде есть текст х*/
+    }
+
+    #desktop >  .w3-mobile:hover {
+      border-bottom: white solid 1px !important;  /* Цвет, сплошная линия, толщина нижней рамки пунктов меню при наведении (вторая строка) */
+}
+  </style>
+
+</head>
+<body class="w3-text-grey w3-large" style="background:rgb(15, 15, 15); /* Цвет фона основной части экрана*/" >
+
+  <!-- Navbar -->
+  <div class="w3-container w3-center top">
+    <button id="main" class="w3-bar-item w3-button" onclick="openMenu('Yura',this)">
+      Yura Kuznetsov
+      <img src="images/yura.jpg" alt="Юра" class="w3-circle  w3-center" id="yuraimg" style="width:3%" >
+      Music and video
+    </button>
+  </div>
+
+ <div id="desktop" class="w3-container w3-center">
+  <a href="javascript:openMenu('My_video', this)" class="w3-bar-item w3-button w3-mobile">Video</a>
+  <a href="javascript:openMenu('Music', this)" class="w3-bar-item w3-button w3-mobile">Music</a>
+  <a href="javascript:openMenu('Contacts', this)" class="w3-bar-item w3-button w3-mobile">Contacts</a>
+  <div class="w3-dropdown-hover w3-mobile" style="width:130px">
+    <button class="w3-button" id="enru" style="padding-left:0;padding-right:0;"><img src="images/united-kingdom-flag.png" id="enru_i" class="w3-image" width="25%"> English <i class="fa fa-light fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+      <a onclick="translMenu('en')" id="en" class="w3-bar-item w3-button w3-mobile"><img src="images/united-kingdom-flag.png" id="en_i" width="25%"> English </a>
+      <a onclick="translMenu('ru')" id="ru" class="w3-bar-item w3-button w3-mobile"><img src="images/Russia-01-1-300x200.png" id="ru_i" width="25%"> Russian </a>
+  </div>
+</div>
+</div>
+
+  
+  
+  <!-- The Yura Section -->
+  <div id="Yura" class="w3-container w3-center menu">
+    <p></p>
+    <a href="javascript:openMenu('Music', '')" class="w3-button w3-round w3-mobile yura" style="margin-top:2vh">Music production</a> 
+    <a href="javascript:openMenu('My_video', '')" class="w3-button w3-round w3-mobile yura" style="margin-top:2vh">Video editing</a>
+    <div class="w3-container w3-center">
+      <a href="mailto:y.kuz@icloud.com?subject=Video editing or music production" class="w3-button w3-round w3-mobile yura" style="margin-top:2vh">Contact me</a>
+    </div>
+  </div>
+
+
+    <!-- The Music Section -->
+    <div id="Music" class="w3-container w3-center menu" style="display:none">
+      <div class="w3-row">
+        <div class="w3-col l4 m12 l12 w3-center">
+        <iframe height="400" frameborder="no" src="https://songwhip.com/yurakuznetsov" ></iframe>
+        </div>
+      </div>
+    </div>
+
+    
+    
+      <!-- The Contacts Section -->
+      <div id="Contacts" class="w3-container menu" style="display:none">
+        <div class="w3-row">
+          <div class="w3-col l4 s1"><p> </p></div>
+        <div class="w3-col l4 s10">
+          <div class="w3-container w3-center">
+            <a href="mailto:y.kuz@icloud.com?subject=Video editing or music production" class="w3-button w3-round w3-mobile contacts" style="margin-top:2vh">Contact me</a>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  
+  
+  <!-- The My_video Section -->
+  <div id="My_video" class="w3-container w3-center menu" style="display:none">
+    <p id="vid1" > Video editing examples. Playlist.</p>
+    <div class="w3-row">
+      <div class="w3-col l4 m12 l12 w3-center">
+      <iframe height="600" src="https://www.youtube.com/embed/videoseries?list=PLUl8BQZrBudPt9n85-_g27Vh-TI04g9KY" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+
+    <script>
+ function translMenu(language) {
+   // Перевод меню
+    if (language == 'ru') {
+      
+      document.getElementById("enru").innerHTML = document.getElementById("ru").innerHTML + '<i class="fa fa-light fa-caret-down"></i>';
+
+      data_t = "Юра Кузнецов";
+
+      data_h01 = 'Yura Kuznetsov';
+      data_h02 = 'Music and video';
+
+      data_h1 = 'Юра Кузнецов';
+      data_h2 = 'Музыка и видео';
+
+      var data =["Видео",
+                "Музыка",
+                "Контакты"];
+
+    } else if (language == 'en') {
+
+      document.getElementById("enru").innerHTML = document.getElementById("en").innerHTML + '<i class="fa fa-light fa-caret-down"></i>';
+
+      data_t = "Yura Kuznetsov";
+
+      data_h01 = 'Юра Кузнецов';
+      data_h02 = 'Музыка и видео';
+
+      data_h1 = 'Yura Kuznetsov';
+      data_h2 = 'Music and video';
+
+      var data =["Video",
+                "Music",
+                "Contacts"];
+    }
+      
+      document.title = data_t;
+
+      var elements = document.getElementById('main');
+      elements.innerHTML = elements.innerHTML.replace(data_h01, data_h1);
+      elements.innerHTML = elements.innerHTML.replace(data_h02,data_h2);
+
+      var x = document.getElementById("desktop");
+
+      var index;
+      for (index = 0; index < x.children.length; ++index) {
+        if (x.children[index].tagName == "A") {
+          x.children[index].innerHTML = data[index]
+        }
+      }
+      // var x = document.getElementsByClassName("menu");
+      //   for (i = 0; i < x.length; i++) {
+      //     var display = window.getComputedStyle(x[i]).display;
+      //     if (display == "block") {
+      //       var myid = x[i].id
+      //     }
+      //   }
+        // translate(myid);
+        translate('Yura', language);
+        translate('Music', language);
+        translate('Contacts', language);
+        translate('My_video', language);
+    }
+
+
+ function translate(my_menuName, language) {
+  // Перевод секций
+
+        switch (my_menuName)
+        {
+          case "Yura":
+            if (language == 'ru') {
+                var data_a =["Создание музыки",
+                            "Видео монтаж",
+                                "Напишите мне"];
+                  data_s = "Монтаж видео и оздание музыки";
+                  
+             } else if (language == 'en') {
+                var data_a =["Music production",
+                            "Video editing",
+                                "Write me"];
+                  data_s = "Music production and video editing";
+             }
+
+            var elements = document.getElementsByClassName('yura');
+            var index;
+            for (index = 0; index < elements.length; ++index) {
+                elements[index].innerHTML = data_a[index]
+                if (index == 2) {
+                    var elem = elements[index].href;
+                    elem = elem.split('=')
+                    elem[1] = data_s
+                    elements[index].href = elem.join('=')
+                }
+            }
+            break;
+
+          case "My_video":
+            if (language == 'ru') {
+            var data_p = "Примеры видеомонтажа. Плейлист.";
+            
+            } else if (language == 'en') {
+              var data_p = "Video editing examples. Playlist.s";
+              
+            }
+            var elements = document.getElementById('vid1');
+            elements.innerHTML = data_p;
+            break;
+      
+
+          case "Contacts":  
+            if (language == 'ru') {
+              var data_a = "Напишите мне";
+              data_s = "Монтаж видео и оздание музыки";
+
+            } else if (language == 'en') {
+              var data_a =["Write me"];
+              data_s = "Video editing or music writing";
+            }
+
+            var elements = document.getElementsByClassName('contacts');
+            var index;
+            for (index = 0; index < elements.length; ++index) {
+              elements[index].innerHTML = data_a
+              if (index == 0) {
+                  var elem = elements[index].href;
+                  elem = elem.split('=')
+                  elem[1] = data_s
+                  elements[index].href = elem.join('=')
+              }
+            }
+          break;
+
+          case "Music":
+              break;
+
+          default:
+          }
+      }
+
+
+      function openMenu(menuName, punct) {
+        // Выбирает объект для отображение после клика по пункту меню
+        var x = document.getElementsByClassName("w3-bar-item");
+        for (i = 0; i < x.length; i++) {
+          x[i].className = x[i].className.replace(" active", "");
+        }
+        punct.className += " active";
+        // 
+        var i;
+        var x = document.getElementsByClassName("menu");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(menuName).style.display = "block";
+      }
+        
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+          document.getElementById('yuraimg').style.width = "10%";
+          document.getElementById('enru_i').style.width = "8%";
+          document.getElementById('en_i').style.width = "8%";
+          document.getElementById('ru_i').style.width = "8%";
+        }
+</script>
+</body>
+</html>
