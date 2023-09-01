@@ -156,7 +156,7 @@ s
     <div id="Music" class="w3-container w3-center menu" style="display:none">
       <div class="w3-row">
         <div class="w3-col l4 m12 l12 w3-center">
-        <iframe height="400" frameborder="no" src="https://songwhip.com/yurakuznetsov" ></iframe>
+        <iframe id="yura_mus" width="800" height="600" frameborder="no" src="https://songwhip.com/yurakuznetsov" ></iframe>
         </div>
       </div>
     </div>
@@ -182,7 +182,7 @@ s
     <p id="vid1" > Video editing examples. Playlist.</p>
     <div class="w3-row">
       <div class="w3-col l4 m12 l12 w3-center">
-      <iframe height="600" src="https://www.youtube.com/embed/videoseries?list=PLUl8BQZrBudPt9n85-_g27Vh-TI04g9KY" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      <iframe id="yura_vid" width="800" height="600" src="https://www.youtube.com/embed/videoseries?list=PLUl8BQZrBudPt9n85-_g27Vh-TI04g9KY" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -351,6 +351,10 @@ s
           document.getElementById('en_i').style.width = "8%";
           document.getElementById('ru_i').style.width = "8%";
           document.getElementById('Yura').style.display = "none";
+          document.getElementById('yura_vid').width = "315";
+          document.getElementById('yura_vid').height="236";
+          document.getElementById('yura_mus').width = "315";
+          document.getElementById('yura_mus').height="236";
         }
 </script>
 </body>
